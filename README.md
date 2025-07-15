@@ -1,33 +1,33 @@
-# DevNarda 🌸
+# Ignitron 🔥
 
-> **Where Ideas Bloom into Code** — Open-source, built with love and collaboration.
+> **Where Ideas Ignite into Code** — Open-source, built with passion and collaboration.
 
-DevNarda is a thriving open-source community dedicated to fostering developer growth through collaboration and innovation. Like the delicate sakura that blooms through seasons, we believe in the power of shared knowledge and collective creativity to build amazing projects that make a difference.
+Ignitron is a thriving open-source community dedicated to fostering developer growth through collaboration and innovation. Like the spark that ignites a flame, we believe in the power of shared knowledge and collective creativity to build amazing projects that make a difference.
 
-## 🎌 Our Philosophy
+## ⚡ Our Philosophy
 
-Inspired by the Japanese concept of **"Kaizen"** (continuous improvement), we create a harmonious space where developers of all levels can learn, contribute, and grow together while building meaningful solutions for the community.
+Inspired by the concept of **"Ignition"** (the moment of breakthrough), we create an energizing space where developers of all levels can learn, contribute, and grow together while building meaningful solutions for the community.
 
 ## 🚀 Our Mission
 
-To cultivate a garden of code where every developer can flourish, sharing wisdom like cherry blossoms in spring — beautiful, purposeful, and inspiring to all who encounter them.
+To kindle a fire of innovation where every developer can shine, sharing energy like sparks in the night — bright, purposeful, and inspiring to all who encounter them.
 
 ## 🎨 Featured Projects
 
-### [NardaUI](https://github.com/devnarda/narda-ui) 🌺
-A beautiful, accessible component library built with React and TypeScript. Designed with modern aesthetics and developer experience in mind, following the principles of **"Shibui"** (subtle, unobtrusive beauty).
+### [IgnitronUI](https://github.com/ignitron/ignitron-ui) 🔥
+A powerful, accessible component library built with React and TypeScript. Designed with modern aesthetics and developer experience in mind, following the principles of **"Blazing Performance"** (fast, efficient, impactful).
 
 **Tech Stack:** React, TypeScript, Tailwind CSS, Storybook
 **Status:** Active Development 🟢
 
-### [DevTools Pro](https://github.com/devnarda/devtools-pro) ⚒️
-A comprehensive collection of development utilities and tools to streamline your workflow. From code formatters to API testing — your digital **"Takumi"** (craftsman) toolkit.
+### [DevTools Pro](https://github.com/ignitron/devtools-pro) ⚒️
+A comprehensive collection of development utilities and tools to streamline your workflow. From code formatters to API testing — your digital **"Catalyst"** toolkit.
 
 **Tech Stack:** Node.js, CLI, JavaScript, JSON
 **Status:** Beta Release 🟡
 
-### [LearnPath](https://github.com/devnarda/learnpath) 🎓
-An interactive learning platform that helps developers master new technologies through guided projects and community mentorship. Following the way of **"Sensei"** (teacher) and **"Deshi"** (student).
+### [LearnPath](https://github.com/ignitron/learnpath) 🎓
+An interactive learning platform that helps developers master new technologies through guided projects and community mentorship. Following the way of **"Mentor"** and **"Learner"**.
 
 **Tech Stack:** Next.js, Prisma, PostgreSQL, Tailwind CSS
 **Status:** Planning Phase 🔵
@@ -46,9 +46,9 @@ An interactive learning platform that helps developers master new technologies t
 - Expertise: UI/UX Design, Modern JavaScript, CSS Architecture
 - Philosophy: *"Beauty in simplicity, elegance in function"*
 
-## 🌸 How to Contribute
+## 🔥 How to Contribute
 
-We welcome contributions from all developers! Like the collaborative spirit of **"Wa"** (harmony), every contribution matters.
+We welcome contributions from all developers! Like the collaborative spirit of **"Synergy"** (combined energy), every contribution matters.
 
 ### 1. **Choose Your Path** 🛤️
 Explore our repositories and find a project that resonates with your interests.
@@ -75,7 +75,7 @@ npm run dev
 git checkout -b feature/amazing-feature
 
 # Make your changes with thoughtful commits
-git commit -m "feat: add amazing feature with zen-like simplicity"
+git commit -m "feat: add amazing feature with blazing performance"
 ```
 
 ### 5. **Submit Pull Request** 📤
@@ -87,7 +87,7 @@ git commit -m "feat: add amazing feature with zen-like simplicity"
 ## 🎯 Contribution Guidelines
 
 ### Code Style
-- **Clean Code**: Follow the principles of **"Seiri"** (organization) and **"Seiton"** (tidiness)
+- **Clean Code**: Follow the principles of **"Optimization"** (efficiency) and **"Clarity"** (readability)
 - **Meaningful Names**: Use descriptive variable and function names
 - **Comments**: Write code that speaks for itself, comment only when necessary
 
@@ -110,9 +110,9 @@ style: improve code formatting
 ## 🌟 Recognition
 
 Contributors who embody our values receive special recognition:
-- **🥇 Takumi Badge**: For exceptional code craftsmanship
-- **🌸 Sakura Contributor**: For consistent, valuable contributions
-- **🎌 Community Leader**: For mentoring and guiding others
+- **🥇 Catalyst Badge**: For exceptional code craftsmanship
+- **🔥 Ignition Contributor**: For consistent, valuable contributions
+- **⚡ Community Leader**: For mentoring and guiding others
 
 ## 📚 Resources
 
@@ -123,32 +123,32 @@ Contributors who embody our values receive special recognition:
 - [Architecture Guide](./docs/architecture.md)
 
 ### Community
-- **Discord**: [Join our community](https://discord.gg/devnarda)
+- **Discord**: [Join our community](https://discord.gg/ignitron)
 - **GitHub Discussions**: Share ideas and get help
-- **Blog**: [devnarda.org/blog](https://devnarda.org/blog)
+- **Blog**: [ignitron.org/blog](https://ignitron.org/blog)
 
 ## 🎪 Events & Workshops
 
 ### Monthly Gatherings
-- **Code Dojo**: Collaborative coding sessions
+- **Code Ignition**: Collaborative coding sessions
 - **Design Critique**: UI/UX review sessions
 - **Tech Talks**: Knowledge sharing presentations
 
 ### Annual Events
-- **DevNarda Summit**: Our flagship conference
+- **Ignitron Summit**: Our flagship conference
 - **Hackathon**: 48-hour innovation challenge
 - **Mentorship Program**: Pairing experienced developers with newcomers
 
 ## 🌍 Global Impact
 
-DevNarda contributors span across continents, creating solutions that benefit developers worldwide:
+Ignitron contributors span across continents, creating solutions that benefit developers worldwide:
 - **🌏 Asia-Pacific**: 45% of contributors
 - **🌍 Europe**: 30% of contributors
 - **🌎 Americas**: 25% of contributors
 
 ## 🙏 Acknowledgments
 
-Special thanks to all contributors who make DevNarda possible. Like the interconnected roots of a bamboo forest, our community grows stronger together.
+Special thanks to all contributors who make Ignitron possible. Like the interconnected sparks of a wildfire, our community grows stronger together.
 
 ### Diamond Sponsors 💎
 - [Sponsor Name](https://sponsor.com)
@@ -163,14 +163,14 @@ Special thanks to all contributors who make DevNarda possible. Like the intercon
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🌸 Final Words
+## 🔥 Final Words
 
 *"The best time to plant a tree was 20 years ago. The second best time is now."* — Chinese Proverb
 
-Join us in cultivating a garden of code where ideas bloom into beautiful, functional solutions. Together, we can create something extraordinary.
+Join us in igniting a fire of innovation where ideas spark into beautiful, functional solutions. Together, we can create something extraordinary.
 
 ---
 
-**Made with ❤️ from Tokyo** | **Built by the community, for the community**
+**Made with ❤️ and ⚡** | **Built by the community, for the community**
 
-[🌐 Website](https://devnarda.org) | [📧 Contact](mailto:hello@devnarda.org) | [🐦 Twitter](https://twitter.com/devnarda) | [💼 LinkedIn](https://linkedin.com/company/devnarda)
+[🌐 Website](https://ignitron.org) | [📧 Contact](mailto:hello@ignitron.org) | [🐦 Twitter](https://twitter.com/ignitron) | [💼 LinkedIn](https://linkedin.com/company/ignitron)
