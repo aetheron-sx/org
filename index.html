@@ -3,21 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevNarda — Where Ideas Bloom into Code</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Ignitron - Lightning-Fast Development Platform | Founded by Bima Adam</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ignitron is a revolutionary lightning-fast development platform founded by Bima Adam Nugaraha. Experience cutting-edge open-source tools, modern UI components, and collaborative development environments designed for the future of coding.">
+    <meta name="keywords" content="Ignitron, Bima Adam, Bima Adam Nugaraha, development platform, open source, lightning fast coding, modern development tools, React components, TypeScript, web development, programming community">
+    <meta name="author" content="Bima Adam Nugaraha">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#3b82f6">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ignitron.dev/">
+    <meta property="og:title" content="Ignitron - Lightning-Fast Development Platform | Founded by Bima Adam">
+    <meta property="og:description" content="Revolutionary development platform by Bima Adam Nugaraha. Experience lightning-fast coding with modern tools and open-source innovation.">
+    <meta property="og:image" content="https://ignitron.dev/og-image.jpg">
+    <meta property="og:site_name" content="Ignitron">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ignitron.dev/">
+    <meta property="twitter:title" content="Ignitron - Lightning-Fast Development Platform">
+    <meta property="twitter:description" content="Revolutionary development platform by Bima Adam Nugaraha. Experience lightning-fast coding with modern tools.">
+    <meta property="twitter:image" content="https://ignitron.dev/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ignitron.dev/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Ignitron",
+        "url": "https://ignitron.dev",
+        "logo": "https://ignitron.dev/logo.png",
+        "description": "Lightning-fast development platform founded by Bima Adam Nugaraha",
+        "founder": {
+            "@type": "Person",
+            "name": "Bima Adam Nugaraha",
+            "alternateName": "Bima Adam",
+            "url": "https://bimaadam.fun"
+        },
+        "sameAs": [
+            "https://github.com/ignitron",
+            "https://twitter.com/ignitron_dev"
+        ]
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* CSS Variables for Theme Management */
         :root {
             /* Light Theme Colors */
             --bg-primary: #ffffff;
-            --bg-secondary: #faf9f7;
-            --bg-accent: #fff5f5;
-            --text-primary: #2d3748;
-            --text-secondary: #718096;
-            --text-muted: #a0aec0;
-            --accent-primary: #f7b2bd;
-            --accent-secondary: #fbb6ce;
-            --accent-hover: #f093a2;
+            --bg-secondary: #f8fafc;
+            --bg-accent: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #6366f1;
+            --accent-hover: #2563eb;
+            --lightning-color: #fbbf24;
+            --lightning-glow: #f59e0b;
             --border-color: #e2e8f0;
             --shadow: rgba(0, 0, 0, 0.1);
             --card-bg: #ffffff;
@@ -25,17 +75,19 @@
 
         [data-theme="dark"] {
             /* Dark Theme Colors */
-            --bg-primary: #1a1b2e;
-            --bg-secondary: #16213e;
-            --bg-accent: #0f172a;
-            --text-primary: #e2e8f0;
-            --text-secondary: #cbd5e0;
-            --text-muted: #a0aec0;
-            --accent-primary: #8b5cf6;
-            --accent-secondary: #a78bfa;
-            --accent-hover: #7c3aed;
-            --border-color: #2d3748;
-            --shadow: rgba(0, 0, 0, 0.3);
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-accent: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #6366f1;
+            --accent-hover: #2563eb;
+            --lightning-color: #fbbf24;
+            --lightning-glow: #f59e0b;
+            --border-color: #475569;
+            --shadow: rgba(0, 0, 0, 0.4);
             --card-bg: #1e293b;
         }
 
@@ -52,6 +104,7 @@
             color: var(--text-primary);
             background-color: var(--bg-primary);
             transition: background-color 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
         }
 
         /* Header & Navigation */
@@ -59,11 +112,15 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: var(--bg-primary);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
             z-index: 1000;
             transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] header {
+            background: rgba(15, 23, 42, 0.9);
         }
 
         nav {
@@ -76,10 +133,19 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 800;
             color: var(--accent-primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            position: relative;
         }
 
         .theme-toggle {
@@ -100,6 +166,44 @@
             transform: translateY(-2px);
         }
 
+        /* 3D Lightning Logo */
+        .lightning-logo {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate3d 6s linear infinite;
+        }
+
+        @keyframes rotate3d {
+            0% { transform: rotateY(0deg) rotateX(0deg); }
+            25% { transform: rotateY(90deg) rotateX(15deg); }
+            50% { transform: rotateY(180deg) rotateX(0deg); }
+            75% { transform: rotateY(270deg) rotateX(-15deg); }
+            100% { transform: rotateY(360deg) rotateX(0deg); }
+        }
+
+        .lightning-bolt {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--lightning-color), var(--lightning-glow));
+            clip-path: polygon(20% 0%, 40% 0%, 30% 45%, 70% 45%, 80% 100%, 60% 100%, 70% 55%, 30% 55%);
+            filter: drop-shadow(0 0 8px var(--lightning-glow));
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { 
+                filter: drop-shadow(0 0 8px var(--lightning-glow));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 16px var(--lightning-glow)) drop-shadow(0 0 24px var(--lightning-color));
+                transform: scale(1.1);
+            }
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -116,40 +220,59 @@
         .hero::before {
             content: '';
             position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--accent-primary) 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.1;
-            animation: float 20s ease-in-out infinite;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+            animation: parallaxFloat 20s ease-in-out infinite;
         }
 
-        @keyframes float {
+        @keyframes parallaxFloat {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(30px) rotate(240deg); }
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             z-index: 2;
             position: relative;
         }
 
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            perspective: 1000px;
+        }
+
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary), var(--lightning-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
         }
 
         .hero .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--text-secondary);
             margin-bottom: 2rem;
-            font-weight: 400;
+            font-weight: 500;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-buttons {
@@ -164,22 +287,39 @@
             padding: 1rem 2rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             transition: all 0.3s ease;
             border: 2px solid transparent;
             cursor: pointer;
             font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn-primary {
-            background: var(--accent-primary);
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
             color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
         .btn-primary:hover {
-            background: var(--accent-hover);
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px var(--shadow);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
 
         .btn-secondary {
@@ -196,17 +336,30 @@
 
         /* Section Styles */
         .section {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: 2.8rem;
+            font-weight: 700;
             margin-bottom: 3rem;
             color: var(--text-primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--lightning-color));
+            border-radius: 2px;
         }
 
         /* About Section */
@@ -219,43 +372,95 @@
         .about::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f7b2bd' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
-            animation: wave 15s linear infinite;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath d='M50 15L65 35H35L50 15Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: backgroundMove 20s linear infinite;
         }
 
-        @keyframes wave {
+        @keyframes backgroundMove {
             0% { transform: translateX(0) translateY(0); }
-            100% { transform: translateX(-60px) translateY(-60px); }
+            100% { transform: translateX(-100px) translateY(-100px); }
         }
 
         .about-content {
             text-align: center;
             font-size: 1.1rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             z-index: 2;
             position: relative;
         }
 
+        .founder-highlight {
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        /* History Section */
+        .history {
+            background: var(--bg-accent);
+        }
+
+        .history-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .history-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .timeline-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-primary);
+            box-shadow: 0 4px 15px var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-text {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .project-card {
             background: var(--card-bg);
-            border-radius: 15px;
-            padding: 2rem;
+            border-radius: 20px;
+            padding: 2.5rem;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
@@ -267,7 +472,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(90deg, var(--accent-primary), var(--lightning-color));
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -277,90 +482,166 @@
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        .project-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .project-card h3 {
             color: var(--text-primary);
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
 
         .project-card p {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         /* Team Section */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .team-member {
             text-align: center;
             background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 3rem 2rem;
+            border-radius: 20px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .team-member:hover::before {
+            opacity: 0.05;
         }
 
         .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px var(--shadow);
         }
 
         .member-avatar {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
-            margin: 0 auto 1rem;
+            margin: 0 auto 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: white;
-            font-weight: 600;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            position: relative;
+            z-index: 2;
         }
 
         .member-name {
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         .member-role {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .member-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .member-link:hover {
+            color: var(--accent-hover);
         }
 
         /* Join Section */
         .join {
-            background: var(--bg-accent);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf24' fill-opacity='0.05'%3E%3Cpath d='M40 10L50 30H30L40 10Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: sparkle 15s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            100% { transform: translateX(-80px) translateY(-80px) rotate(360deg); }
         }
 
         .join-content {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .join p {
             font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 2rem;
+            line-height: 1.7;
         }
 
         /* Footer */
         footer {
             background: var(--bg-secondary);
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
             border-top: 1px solid var(--border-color);
         }
@@ -375,16 +656,19 @@
             justify-content: center;
             gap: 2rem;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .footer-links a:hover {
             color: var(--accent-primary);
+            transform: translateY(-2px);
         }
 
         .footer-text {
@@ -402,8 +686,16 @@
                 padding: 2rem 1rem;
             }
 
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
             .section {
-                padding: 3rem 1rem;
+                padding: 4rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
             }
 
             .cta-buttons {
@@ -416,9 +708,21 @@
                 max-width: 300px;
             }
 
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-links {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            .timeline-item:hover {
+                transform: none;
             }
         }
     </style>
@@ -427,7 +731,14 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">DevNarda</a>
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <div class="lightning-logo">
+                        <div class="lightning-bolt"></div>
+                    </div>
+                </div>
+                Ignitron
+            </a>
             <button class="theme-toggle" id="themeToggle">
                 🌙 Dark Mode
             </button>
@@ -437,22 +748,68 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>DevNarda — Where Ideas Bloom into Code.</h1>
-            <p class="subtitle">Open-source, built with love and collaboration.</p>
+            <div class="hero-logo">
+                <div class="lightning-logo">
+                    <div class="lightning-bolt"></div>
+                </div>
+            </div>
+            <h1>Ignitron</h1>
+            <p class="subtitle">Lightning-Fast Development Platform</p>
+            <p class="description">Where innovation meets velocity. Experience the future of development with cutting-edge tools, modern architecture, and lightning-fast performance.</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                <a href="#join" class="btn btn-secondary">Contribute Now</a>
+                <a href="#join" class="btn btn-secondary">Join Community</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about section" id="about">
-        <h2 class="section-title">About DevNarda</h2>
+        <h2 class="section-title">About Ignitron</h2>
         <div class="about-content">
-            <p>DevNarda is a thriving open-source community dedicated to fostering developer growth through collaboration and innovation. We believe in the power of shared knowledge and collective creativity to build amazing projects that make a difference.</p>
+            <p>Ignitron is a revolutionary lightning-fast development platform that transforms how developers build, collaborate, and innovate. Founded by <span class="founder-highlight">Bima Adam Nugaraha</span>, our platform combines cutting-edge technology with intuitive design to deliver unprecedented development velocity.</p>
             <br>
-            <p>Our mission is to create a space where developers of all levels can learn, contribute, and grow together while building meaningful solutions for the community.</p>
+            <p>We believe in the power of speed, precision, and community-driven innovation. Ignitron provides developers with the tools they need to build the next generation of applications with lightning-fast performance and modern architecture.</p>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="history section" id="history">
+        <h2 class="section-title">Our Journey</h2>
+        <div class="history-content">
+            <p>The story of Ignitron begins with a vision to revolutionize the development experience through speed and innovation.</p>
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-text">
+                        <strong>Bima Adam Nugaraha</strong> (bimaadam.fun) conceptualized Ignitron while working on high-performance applications. Frustrated with slow development cycles and complex toolchains, he envisioned a platform that would ignite developer productivity like lightning.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Early 2024</div>
+                    <div class="timeline-text">
+                        Development began with a focus on lightning-fast compilation, intelligent code optimization, and seamless developer experience. The first prototype demonstrated 10x faster build times compared to traditional tools.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Mid 2024</div>
+                    <div class="timeline-text">
+                        <strong>Hikari Takahashi</strong> joined as Front-End Developer, bringing expertise in modern UI/UX design and component architecture. Together, they refined Ignitron's interface and developer experience.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Late 2024</div>
+                    <div class="timeline-text">
+                        Ignitron launched publicly with revolutionary features including AI-powered code completion, real-time collaboration, and lightning-fast hot reload. The platform quickly gained recognition in the developer community.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-text">
+                        Today, Ignitron continues to push the boundaries of development speed and efficiency, empowering thousands of developers worldwide to build better applications faster than ever before.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -461,18 +818,21 @@
         <h2 class="section-title">Our Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>NardaUI</h3>
-                <p>A beautiful, accessible component library built with React and TypeScript. Designed with modern aesthetics and developer experience in mind.</p>
+                <div class="project-icon">⚡</div>
+                <h3>Ignitron Core</h3>
+                <p>The lightning-fast development engine that powers everything. Built with Rust and TypeScript, featuring instant compilation, intelligent caching, and real-time optimization.</p>
                 <a href="#" class="btn btn-primary">View Project</a>
             </div>
             <div class="project-card">
-                <h3>DevTools Pro</h3>
-                <p>A comprehensive collection of development utilities and tools to streamline your workflow. From code formatters to API testing.</p>
+                <div class="project-icon">🎨</div>
+                <h3>Lightning UI</h3>
+                <p>A beautiful, high-performance component library designed for modern applications. Features lightning-fast rendering, accessibility-first design, and seamless integration.</p>
                 <a href="#" class="btn btn-primary">View Project</a>
             </div>
             <div class="project-card">
-                <h3>LearnPath</h3>
-                <p>An interactive learning platform that helps developers master new technologies through guided projects and community mentorship.</p>
+                <div class="project-icon">🚀</div>
+                <h3>Velocity Tools</h3>
+                <p>A comprehensive suite of development tools including code generators, performance analyzers, and deployment optimizers. Everything you need for lightning-fast development.</p>
                 <a href="#" class="btn btn-primary">View Project</a>
             </div>
         </div>
@@ -484,13 +844,15 @@
         <div class="team-grid">
             <div class="team-member">
                 <div class="member-avatar">BA</div>
-                <div class="member-name">Bima Adam</div>
-                <div class="member-role">Full-Stack Maintainer</div>
+                <div class="member-name">Bima Adam Nugaraha</div>
+                <div class="member-role">Founder & Full-Stack Architect</div>
+                <a href="https://bimaadam.fun" class="member-link">bimaadam.fun</a>
             </div>
             <div class="team-member">
                 <div class="member-avatar">HT</div>
                 <div class="member-name">Hikari Takahashi</div>
-                <div class="member-role">Front-End Engineer</div>
+                <div class="member-role">Front-End Developer</div>
+                <a href="#" class="member-link">Portfolio</a>
             </div>
         </div>
     </section>
@@ -498,9 +860,10 @@
     <!-- Join Section -->
     <section class="join section" id="join">
         <div class="join-content">
-            <h2 class="section-title">Join Our Community</h2>
-            <p>Ready to be part of something amazing? Explore our repositories, contribute to ongoing projects, or start your own initiative. Every contribution, no matter how small, makes a difference.</p>
-            <a href="https://github.com/devnarda" class="btn btn-primary">Visit Our GitHub</a>
+            <h2 class="section-title">Join the Lightning Revolution</h2>
+            <p>Ready to experience lightning-fast development? Join our community of innovative developers who are building the future with Ignitron. Contribute to our open-source projects, share your ideas, and help shape the next generation of development tools.</p>
+            <p>Every contribution sparks innovation. Every idea ignites possibility. Every developer makes the lightning stronger.</p>
+            <a href="https://github.com/ignitron" class="btn btn-primary">View GitHub</a>
         </div>
     </section>
 
@@ -508,12 +871,14 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="https://github.com/devnarda">GitHub</a>
-                <a href="mailto:contact@devnarda.org">Contact</a>
+                <a href="https://github.com/ignitron">GitHub</a>
+                <a href="https://bimaadam.fun">Founder</a>
+                <a href="mailto:contact@ignitron.dev">Contact</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
+                <a href="#history">History</a>
             </div>
-            <p class="footer-text">© DevNarda — Made with ❤️ from Tokyo</p>
+            <p class="footer-text">© 2025 Ignitron — Lightning-Fast Development Platform | Founded by Bima Adam Nugaraha</p>
         </div>
     </footer>
 
@@ -560,6 +925,115 @@
                     });
                 }
             });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (hero && heroContent) {
+                const rate = scrolled * -0.5;
+                heroContent.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Enhanced lightning bolt animation
+        const lightningBolts = document.querySelectorAll('.lightning-bolt');
+        lightningBolts.forEach(bolt => {
+            bolt.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.5s ease-in-out';
+            });
+            
+            bolt.addEventListener('mouseleave', function() {
+                this.style.animation = 'pulse 2s ease-in-out infinite';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.project-card, .team-member, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Dynamic lightning effects
+        function createLightningEffect() {
+            const lightning = document.createElement('div');
+            lightning.style.position = 'fixed';
+            lightning.style.top = '0';
+            lightning.style.left = Math.random() * 100 + '%';
+            lightning.style.width = '2px';
+            lightning.style.height = '100vh';
+            lightning.style.background = 'linear-gradient(180deg, #fbbf24, transparent)';
+            lightning.style.opacity = '0.7';
+            lightning.style.pointerEvents = 'none';
+            lightning.style.zIndex = '9999';
+            lightning.style.animation = 'flash 0.1s ease-in-out';
+            
+            document.body.appendChild(lightning);
+            
+            setTimeout(() => {
+                lightning.remove();
+            }, 100);
+        }
+
+        // Add flash animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes flash {
+                0% { opacity: 0; }
+                50% { opacity: 0.7; }
+                100% { opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Trigger lightning effect randomly
+        setInterval(() => {
+            if (Math.random() < 0.1) { // 10% chance every 3 seconds
+                createLightningEffect();
+            }
+        }, 3000);
+
+        // Enhanced scroll effects
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('header');
+            
+            if (scrolled > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+            
+            // Update for dark theme
+            if (body.getAttribute('data-theme') === 'dark') {
+                if (scrolled > 50) {
+                    header.style.background = 'rgba(15, 23, 42, 0.95)';
+                } else {
+                    header.style.background = 'rgba(15, 23, 42, 0.9)';
+                }
+            }
         });
     </script>
 </body>
